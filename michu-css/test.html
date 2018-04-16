@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="michu.css">
+    <link rel="stylesheet" href="test.css">
+    <title>Michu css</title>
+</head>
+
+<body>
+    <div class="mi container flex flex flex-start flex-align-start m-0-auto">
+        <div class="mi container flex flex-column flex-start flex-align-start border rounded width-100 m-10">
+            <div>
+                <div>
+                    <h3>Botones default</h3>
+                </div>
+                <button class="mi button">ver más</button>
+            </div>
+            <div>
+                <div>
+                    <h3>botones coloreados</h3>
+                    <button class="mi button red colored">ver más</button>
+                    <a class="mi button melon colored">ver más</a>
+                    <input type="button" value="ver más" class="mi button greenLight colored">
+                    <input type="submit" value="ver más" class="mi button orange colored">
+                    <button class="mi button blue colored">ver más</button>
+                    <a class="mi button blueLight colored">ver más</a>
+                    <input type="button" value="ver más" class="mi button green colored">
+                    <input type="submit" value="ver más" class="mi button yellow colored">
+                    <button class="mi button purple colored">ver más</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>botones con borde</h3>
+                    <button class="mi button red bordered">ver más</button>
+                    <a class="mi button melon bordered">ver más</a>
+                    <input type="button" value="ver más" class="mi button greenLight bordered">
+                    <input type="submit" value="ver más" class="mi button orange bordered">
+                    <button class="mi button blue bordered">ver más</button>
+                    <a class="mi button blueLight bordered">ver más</a>
+                    <input type="button" value="ver más" class="mi button green bordered">
+                    <input type="submit" value="ver más" class="mi button yellow bordered">
+                    <button class="mi button purple bordered">ver más</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>botones toggle</h3>
+                    <!-- INICIO ESTRUCTURA PARA HACER UN FLIP TOGGLE -->
+                    <div class="container-flip-toggle">
+                        <input type="checkbox" id="flip-toggle" flip-toggle>
+                        <div class="flip-toggle">
+                            <div class="flip-toggle-yes">
+                                <label flip-toggle for="flip-toggle">yes</label>
+                            </div>
+                            <div class="flip-toggle-no">
+                                <label flip-toggle for="flip-toggle">nope</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN ESTRUCTURA PARA HACER UN FLIP TOGGLE -->
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>botones efecto</h3>
+                </div>
+                <button class="mi button red bordered elegance-top">ver más</button>
+                <button class="mi button green bordered elegance-left">ver más</button>
+                <button class="mi button blueLight bordered elegance-diagonal">ver más</button>
+                <input type="button" value="ver más" class="mi button blue bordered hover">
+                <input type="submit" value="ver más" class="mi button orange bordered hover">
+                <button class="mi button purple bordered hover">ver más</button>
+                <button class="mi button green bordered animate-border abl">ver más</button>
+                <button class="mi button green bordered animate-border abr">ver más</button>
+                <button class="mi button green bordered animate-border ablt">ver más</button>
+                <button class="mi button green bordered animate-border abc">ver más</button>
+                <button class="mi button green bordered animate-border abtb">ver más</button>
+            </div>
+            <div>
+                <div>
+                    <h3>botones figuras</h3>
+                    <a class="mi button bg-transparent color-melon border border-red bg-hover-transparent shake-left-round">ver más</a>
+                    <button class="mi button red colored shake-right-round">ver más</button>
+                    <div class="mi container flex flex-column flex-start flex-align-start">
+                        <a class="mi button bg-transparent color-melon border border-red bg-hover-red shake-top-round">ver más</a>
+                        <button class="mi button red colored shake-bottom-round" style="margin-top:5px;">ver más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mi container flex m-10">
+
+        </div>
+        <div class="mi container flex m-10">
+
+        </div>
+        <div class="mi container flex m-10 width-100">
+            <div>
+                <h3>imagenes filtros y bordes</h3>
+                <img src="img/hoja2.jpg" alt="" class="mi img bordered" />
+                <img src="img/hoja2.jpg" alt="" class="mi img circle" />
+                <img src="img/hoja2.jpg" alt="" class="mi img rounded" />
+                <img src="img/hoja2.jpg" alt="" class="mi img blur" />
+                <img src="img/hoja2.jpg" alt="" class="mi img grays" />
+                <img src="img/hoja2.jpg" alt="" class="mi img invert" />
+                <img src="img/hoja2.jpg" alt="" class="mi img sepia" />
+                <img src="img/hoja2.jpg" alt="" class="mi img rotate-color" />
+                <img src="img/hoja2.jpg" alt="" class="mi img brightness-50" />
+                <img src="img/hoja2.jpg" alt="" class="mi img brightness-150" />
+                <img src="img/hoja2.jpg" alt="" class="mi img saturate" />
+            </div>
+        </div>
+        <div class="mi container flex m-10 width-40">
+            <div class="width-100">
+                <h3>contenedores con borde</h3>
+                <div class="mi border border-red" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border-top border-melon" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border-right border-greenLight" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border-bottom border-orange" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border-left border-blue" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border border-blueLight" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border border-green" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi border border-yellow" style="padding:10px;margin: 10px;">caja</div>
+                <div class="mi border border-purple" style="padding:10px; margin: 10px;">caja</div>
+            </div>
+        </div>
+        <div class="mi container flex m-10 width-40">
+            <div class="width-100">
+                <h3>contenedores con fondo</h3>
+                <div class="mi bg-red" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-melon" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-greenLight" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-orange" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-blue" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-blueLight" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-green" style="padding:10px; margin: 10px;">caja</div>
+                <div class="mi bg-yellow" style="padding:10px;margin: 10px;">caja</div>
+                <div class="mi bg-purple" style="padding:10px; margin: 10px;">caja</div>
+            </div>
+        </div>
+        <div class="mi container flex m-10 width-100">
+            <div>
+                <h3>contenedores</h3>
+                <div class="mi container">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mi container flex m-10 width-40">
+            <div class="width-100">
+                <h3>cajas de texto</h3>
+                <input type="text" class="mi input-text">
+                <br>
+                <br>
+                <input type="text" class="mi input-text-bottom">
+                <br>
+                <br>
+                <input type="text" class="mi input-text-left">
+            </div>
+        </div>
+        <div class="mi container flex m-10 width-40">
+            <div>
+                <h3>sombras</h3>
+                <div class="mi container border rounded shadow">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-x">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-y">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-x-y">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-inset">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-x-inset">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-y-inset">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+                <br>
+                <div class="mi container border rounded shadow-x-y-inset">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ratione maiores a voluptatum, facere assumenda
+                        architecto odit minima sit modi quam at quasi cupiditate consequuntur, rerum similique nisi recusandae
+                        quia.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="mi container flex m-10  border width-100">
+            <div>
+                <h3>efectos</h3>
+                <img src="img/hoja2.jpg" alt="" class="mi img effect zoom-in" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect zoom-out" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect spin" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect rotate" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect bounce" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect tada" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect shake" />
+                <img src="img/hoja2.jpg" alt="" class="mi img effect intermittent" />
+            </div>
+        </div>
+    </div>
+    <script src="descripcion.js"></script>
+</body>
+
+</html>

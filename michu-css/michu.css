@@ -1,0 +1,1334 @@
+/*
+*   libreria css
+*/
+body .mi{
+    --color-melon: #ff4757;
+    --color-sec-melon:#fd1c2f;
+    --color-green: #4cd137;
+    --color-sec-green: #17ad56;
+    --color-yellow: #fff200;
+    --color-sec-yellow: #e6da00;
+    --color-blue: #5352ed;
+    --color-sec-blue: #3a3af7;;
+    --color-blueLight: #1e90ff;
+    --color-sec-blueLight: #0a7ff5;
+    --color-greenLight: #2ed573;
+    --color-sec-greenLight: #2b991a;
+    --color-red: #EA2027;
+    --color-sec-red: rgb(196, 27, 32);
+    --color-orange: #FFC312;
+    --color-sec-orange: rgb(255, 153, 0);
+    --color-purple: #cd84f1;
+    --color-sec-purple: #b34ae7;;
+}
+.mi {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**************************
+* BOTONES
+***************************/
+.mi.button {
+    box-shadow: none;
+    border: 1px solid transparent;
+    outline: none;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.9;
+    border-radius: 4px;
+    padding: 5px 7px;
+    background: silver;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: white;
+    font-size: 0.8em;
+}
+.mi.button:hover,
+.mi.button:active {
+    background: rgb(165, 163, 163);
+    transition: background 0.3s linear;
+}
+/*************************************
+* EFFECTS
+*************************************/
+.mi.effect {
+    /*
+    * si quieres que los efectos se superpongan sobre otros elementos
+    * asegurate de que el elemento con efecto este posicionado.
+    */
+}
+.mi.effect.tada:hover {
+    animation: tada 2s 1 ease-in-out;
+    z-index: 100;
+}
+.mi.effect.bounce:hover {
+    animation: bounce 1.5s 1 ease-in-out;
+}
+.mi.effect.shake:hover {
+    animation: shake 2s 1 ease-in-out;
+}
+.mi.effect.spin:hover {
+    animation: spin 1s 1 ease-in-out;
+}
+.mi.effect.rotate:hover {
+    animation : rotate 1.5s 1 ease-in-out;
+}
+.mi.effect.zoom-in:hover {
+    animation: zoom-in 0.5s 1 ease-in-out;
+}
+.mi.effect.zoom-out:hover {
+    animation: zoom-out 0.5s 1 ease-in-out;
+}
+.mi.effect.gum:hover {
+    animation: gum 1s 1;
+}
+.mi.effect.dblclick:hover {
+    animation: dblclick 0.9s 1;
+}
+.mi.effect.intermittent:hover {
+    animation: intermittent 1.5s 1;
+}
+@keyframes zoom-in {
+    10% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+}
+@keyframes zoom-out {
+    10% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+@keyframes spin {
+    10% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    10% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes bounce {
+    20%, 50%, 80% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-30px);
+    }
+
+   65% {
+     transform: translateY(-15px);
+   }
+}
+@keyframes tada {
+
+    20% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    40%, 60%, 80% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+  }
+@keyframes shake {
+    20%, 40%, 60%, 80% {
+        transform: scale(1.1);
+        transform: rotate(3deg);
+    }
+
+    30%, 50%, 70%, 100% {
+        transform: scale(1.1);
+        transform: rotate(-3deg);
+    }
+}
+@keyframes intermittent {
+    25%, 75% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes dblclick {
+    40% {
+      transform: scale(1.1);
+    }
+    20%, 60% {
+      transform: scale(0.8);
+    }
+  }
+  @keyframes gum {
+    30% {
+      transform: scaleX(1.25) scaleY(0.75);
+    }
+
+    40% {
+      transform: scaleX(0.75) scaleY(1.25);
+    }
+
+    60% {
+      transform: scaleX(1.15) scaleY(0.85);
+    }
+  }
+/*************************************
+* SHAKES
+*************************************/
+.mi.shake-left-round {
+    border-radius: 16px 0px 0px 16px !important;
+}
+.mi.shake-right-round {
+    border-radius: 0 16px 16px 0 !important;
+}
+.mi.shake-top-round {
+    border-radius: 16px 16px 0px 0px !important;
+}
+.mi.shake-bottom-round {
+    border-radius: 0px 0px 16px 16px !important;
+}
+/*************************************
+* BUTTONS TOGGLE
+*************************************/
+/*----FLIP TOGGLE---*/
+input[flip-toggle] {
+    display: none;
+}
+input[flip-toggle]:checked + .flip-toggle {
+    transform:rotatey(180deg);
+}
+label[flip-toggle] {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+.container-flip-toggle {
+    width:60px;
+    height:35px;
+    position:relative;
+    -webkit-perspective: 400px;
+      perspective: 400px;
+  }
+  .flip-toggle {
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    height:100%;
+    color:white;
+    position:relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    border-radius: 4px;
+  }
+.flip-toggle-yes,
+.flip-toggle-no{
+    border-radius: 4px;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    backface-visibility:hidden;
+  }
+  .flip-toggle-yes {
+    backface-visibility:hidden;
+    transform: rotateY(180deg);
+    background:green;
+  }
+  .flip-toggle-no {
+    background:crimson;
+    backface-visibility:hidden;
+  }
+/*************************************
+* COLORED
+*************************************/
+.mi.button.red.colored{
+    background: var(--color-red);
+}
+.mi.button.red.colored:hover,
+.mi.button.red.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-red);
+}
+.mi.button.melon.colored{
+    background: var(--color-melon);
+}
+.mi.button.melon.colored:hover,
+.mi.button.melon.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-melon);
+}
+.mi.button.greenLight.colored{
+    background: var(--color-greenLight);
+}
+.mi.button.greenLight.colored:hover,
+.mi.button.greenLight.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-greenLight);
+}
+.mi.button.orange.colored{
+    background: var(--color-orange);
+}
+.mi.button.orange.colored:hover,
+.mi.button.orange.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-orange);
+}
+.mi.button.blue.colored{
+    background: var(--color-blue);
+}
+.mi.button.blue.colored:hover,
+.mi.button.blue.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-blue);
+}
+.mi.button.blueLight.colored{
+    background: var(--color-blueLight);
+}
+.mi.button.blueLight.colored:hover,
+.mi.button.blueLight.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-blueLight);
+}
+.mi.button.green.colored{
+    background: var(--color-green);
+}
+.mi.button.green.colored:hover,
+.mi.button.green.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-green);
+}
+.mi.button.yellow.colored{
+    background: var(--color-yellow);
+}
+.mi.button.yellow.colored:hover,
+.mi.button.yellow.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-yellow);
+}
+.mi.button.purple.colored{
+    background: var(--color-purple);
+}
+.mi.button.purple.colored:hover,
+.mi.button.purple.colored:active {
+    transition: background 0.3s linear;
+    background: var(--color-sec-purple);
+}
+/*************************************
+* BORDERED
+*************************************/
+.mi.button.red.bordered {
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    background: transparent;
+}
+.mi.button.red.bordered.hover:hover,
+.mi.button.red.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-red);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.melon.bordered {
+    border: 1px solid var(--color-melon);
+    color: var(--color-melon);
+    background: transparent;
+}
+.mi.button.melon.bordered.hover:hover,
+.mi.button.melon.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-melon);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.greenLight.bordered {
+    border: 1px solid var(--color-greenLight);
+    color: var(--color-greenLight);
+    background: transparent;
+}
+.mi.button.greenLight.bordered.hover:hover,
+.mi.button.greenLight.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-greenLight);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.orange.bordered {
+    border: 1px solid var(--color-orange);
+    color: var(--color-orange);
+    background: transparent;
+}
+.mi.button.orange.bordered.hover:hover,
+.mi.button.orange.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-orange);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.blue.bordered {
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    background: transparent;
+}
+.mi.button.blue.bordered.hover:hover,
+.mi.button.blue.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-blue);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.blueLight.bordered {
+    border: 1px solid var(--color-blueLight);
+    color: var(--color-blueLight);
+    background: transparent;
+}
+.mi.button.blueLight.bordered.hover:hover,
+.mi.button.blueLight.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-blueLight);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.green.bordered {
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+    background: transparent;
+}
+.mi.button.green.bordered.hover:hover,
+.mi.button.green.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-green);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.yellow.bordered {
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+    background: transparent;
+}
+.mi.button.yellow.bordered.hover:hover,
+.mi.button.yellow.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-yellow);
+    color: white;
+    transition: background 0.3s linear;
+}
+.mi.button.purple.bordered {
+    border: 1px solid var(--color-purple);
+    color: var(--color-purple);
+    background: transparent;
+}
+.mi.button.purple.bordered.hover:hover,
+.mi.button.purple.bordered.active:active {
+    border: 1px solid transparent;
+    background: var(--color-purple);
+    color: white;
+    transition: background 0.3s linear;
+}
+/*********************************
+* BORDERED ELEGANCE
+**********************************/
+/*----aqui poner todos los otros colores*/
+/*button[class~="elegance"]:hover {
+    color: white !important;
+}*/
+.mi.button.bordered.blue.elegance-top:before,
+.mi.button.bordered.blue.elegance-top:after,
+.mi.button.bordered.blue.elegance-left:before,
+.mi.button.bordered.blue.elegance-left:after,
+.mi.button.bordered.blue.elegance-diagonal:before,
+.mi.button.bordered.blue.elegance-diagonal:after{
+    background: var(--color-blue);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.2s linear;
+    border-radius: 4px;
+}
+.mi.button.bordered.red.elegance-top:before,
+.mi.button.bordered.red.elegance-top:after,
+.mi.button.bordered.red.elegance-left:before,
+.mi.button.bordered.red.elegance-left:after,
+.mi.button.bordered.red.elegance-diagonal:before,
+.mi.button.bordered.red.elegance-diagonal:after {
+    background: var(--color-red);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.2s linear;
+    border-radius: 4px;
+}
+.mi.button.bordered.green.elegance-top:before,
+.mi.button.bordered.green.elegance-top:after,
+.mi.button.bordered.green.elegance-left:before,
+.mi.button.bordered.green.elegance-left:after,
+.mi.button.bordered.green.elegance-diagonal:before,
+.mi.button.bordered.green.elegance-diagonal:after {
+    background: var(--color-green);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.2s linear;
+    border-radius: 4px;
+}
+.mi.button.bordered.blueLight.elegance-top:before,
+.mi.button.bordered.blueLight.elegance-top:after,
+.mi.button.bordered.blueLight.elegance-left:before,
+.mi.button.bordered.blueLight.elegance-left:after,
+.mi.button.bordered.blueLight.elegance-diagonal:before,
+.mi.button.bordered.blueLight.elegance-diagonal:after {
+    background: var(--color-blueLight);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.2s linear;
+    border-radius: 4px;
+}
+.mi.button.bordered.greenLight.elegance-top:before,
+.mi.button.bordered.greenLight.elegance-top:after,
+.mi.button.bordered.greenLight.elegance-left:before,
+.mi.button.bordered.greenLight.elegance-left:after,
+.mi.button.bordered.greenLight.elegance-diagonal:before,
+.mi.button.bordered.greenLight.elegance-diagonal:after {
+  background: var(--color-greenLight);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.2s linear;
+  border-radius: 4px;
+}
+.mi.button.bordered.elegance-top:hover,
+.mi.button.bordered.elegance-left:hover,
+.mi.button.bordered.elegance-diagonal:hover {
+    color: white;
+}
+/*poner los efectos como tales*/
+.mi.button.bordered.elegance-top:after {
+    height: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+}
+.mi.button.bordered.elegance-top:hover:after {
+    height: 100% !important;
+}
+.mi.button.bordered.elegance-left::after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+.mi.button.bordered.elegance-left:hover:after {
+    width: 100%;
+}
+.mi.button.bordered.elegance-diagonal {
+    overflow: hidden;
+}
+.mi.button.bordered.elegance-diagonal::after {
+    height: 100%;
+    left: -70%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+.mi.button.bordered.elegance-diagonal:hover:after {
+    height: 100%;
+    width: 174%;
+  }
+/**********************************
+* BOTONES BORDER ANIMADOS
+**********************************/
+.mi.button.bordered.animate-border {
+    position: relative;
+    border-radius: 0;
+    border: 1px solid transparent;
+}
+.mi.button.bordered.animate-border:before,
+.mi.button.bordered.animate-border:after{
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.2s;
+}
+
+.mi.button.bordered.green.animate-border.abl:before {
+    width: 0;
+    height: 1px;
+    background: var(--color-green);
+    left: 0;
+    bottom: -1px;
+}
+.mi.button.bordered.green.animate-border.abl:hover:before {
+    width: 100%;
+}
+
+.mi.button.bordered.green.animate-border.abr:before {
+    width: 0;
+    height: 1px;
+    right: 0;
+    bottom: -1px;
+    background: var(--color-green);
+}
+.mi.button.bordered.green.animate-border.abr:hover:before {
+    width: 100%;
+}
+
+.mi.button.bordered.green.animate-border.abc:before {
+    left: 50%;
+    width: 0;
+    bottom: -1px;
+    height: 1px;
+    background: var(--color-green);
+}
+.mi.button.bordered.green.animate-border.abc:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+.mi.button.bordered.green.animate-border.ablt:before {
+    width: 1px;
+    height: 0;
+    bottom: 0;
+    left: -1px;
+    background: var(--color-green);
+}
+.mi.button.bordered.green.animate-border.ablt:hover:before {
+    height: 100%;
+}
+
+.mi.button.bordered.green.animate-border.abtb:before {
+    width: 0;
+    height: 1px;
+    top: -1px;
+    left: 100%;
+    background: var(--color-green);
+}
+.mi.button.bordered.green.animate-border.abtb:after {
+    width: 0;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background: var(--color-green);
+}
+.mi.button.bordered.green.animate-border.abtb:hover:before {
+    width: 100%;
+    left: 0;
+}
+.mi.button.bordered.green.animate-border.abtb:hover:after {
+    width: 100%;
+}
+
+----------------------------------------------------------------
+
+.mi.button.bordered.red.animate-border.abl:before {
+  width: 0;
+  height: 1px;
+  background: var(--color-red);
+  left: 0;
+  bottom: -1px;
+}
+.mi.button.bordered.red.animate-border.abl:hover:before {
+  width: 100%;
+}
+
+.mi.button.bordered.red.animate-border.abr:before {
+  width: 0;
+  height: 1px;
+  right: 0;
+  bottom: -1px;
+  background: var(--color-red);
+}
+.mi.button.bordered.red.animate-border.abr:hover:before {
+  width: 100%;
+}
+
+.mi.button.bordered.red.animate-border.abc:before {
+  left: 50%;
+  width: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--color-red);
+}
+.mi.button.bordered.red.animate-border.abc:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+.mi.button.bordered.red.animate-border.ablt:before {
+  width: 1px;
+  height: 0;
+  bottom: 0;
+  left: -1px;
+  background: var(--color-red);
+}
+.mi.button.bordered.red.animate-border.ablt:hover:before {
+  height: 100%;
+}
+
+.mi.button.bordered.red.animate-border.abtb:before {
+  width: 0;
+  height: 1px;
+  top: -1px;
+  left: 100%;
+  background: var(--color-red);
+}
+.mi.button.bordered.red.animate-border.abtb:after {
+  width: 0;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background: var(--color-red);
+}
+.mi.button.bordered.red.animate-border.abtb:hover:before {
+  width: 100%;
+  left: 0;
+}
+.mi.button.bordered.red.animate-border.abtb:hover:after {
+  width: 100%;
+}
+
+    /**********************************
+    * LINKS
+    **********************************/
+.mi.link {
+    font-size: 0.8em;
+    color: rgb(0, 109, 211);
+    text-decoration: underline;
+}
+.mi.link.reference {
+    font-style: italic;
+}
+.mi.link:hover,
+.mi.link:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+.mi.link:visited {
+    color: rgb(5, 80, 150);
+}
+/************************************
+* IMAGENES
+************************************/
+.mi.img {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.mi.img.rounded {
+    border-radius: 4px;
+}
+.mi.img.circle {
+    border-radius: 50%;
+}
+.mi.img.bordered {
+    border: 3px solid rgb(228, 226, 226);
+}
+.mi.blur {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+    -o-filter: blur(3px);
+    filter: blur(3px);
+}
+.mi.grays {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.mi.invert {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    -o-filter: invert(100%);
+    filter: invert(100%);
+}
+.mi.sepia {
+    -webkit-filter: sepia(100%);
+    -moz-filter: sepia(100%);
+    -o-filter: sepia(100%);
+    filter: sepia(100%);
+}
+.mi.rotate-color {
+    -webkit-filter: hue-rotate(45deg);
+    -moz-filter: hue-rotate(45deg);
+    -o-filter: hue-rotate(45deg);
+    filter: hue-rotate(45deg);
+}
+.mi.brightness-50 {
+    -webkit-filter: hue-rotate(50%);
+    -moz-filter: hue-rotate(50%);
+    -ms-filter: hue-rotate(50%);
+    -o-filter: hue-rotate(50%);
+    filter: hue-rotate(50%);
+}
+.mi.brightness-150 {
+  -webkit-filter: hue-rotate(150deg);
+  -moz-filter: hue-rotate(150deg);
+  -o-filter: hue-rotate(150deg);
+  filter: hue-rotate(150deg);
+}
+.mi.saturate {
+    -webkit-filter: saturate(250%);
+    -moz-filter: saturate(250%);
+    -o-filter: saturate(250%);
+    filter: saturate(250%);
+}
+.mi.img:before {
+    content:"hola munduiqwnduibd";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+/***************************************
+* BACKGROUNDS
+***************************************/
+.mi.bg-red,
+.mi.bg-melon,
+.mi.bg-greenLight,
+.mi.bg-orange,
+.mi.bg-blue,
+.mi.bg-blueLight,
+.mi.bg-green,
+.mi.bg-yellow,
+.mi.bg-purple,
+.mi.bg-transparent {
+    border: 1px solid transparent;
+}
+.mi.bg-red {
+    background: #EA2027;
+}
+.mi.bg-melon {
+    background: #ff4757;
+}
+.mi.bg-greenLight {
+    background: #4cd137;
+}
+.mi.bg-orange {
+    background: #FFC312;
+}
+.mi.bg-blue {
+    background: #5352ed;
+}
+.mi.bg-blueLight {
+    background: #1e90ff;
+}
+.mi.bg-green {
+    background: #2ed573;
+}
+.mi.bg-yellow {
+    background: #fff200;
+}
+.mi.bg-purple {
+    background: #cd84f1;
+}
+.mi.bg-transparent {
+    background: transparent;
+}
+.mi.bg-hover-red:hover {
+    background: #EA2027;
+}
+.mi.bg-hover-melon:hover {
+    background: #ff4757;
+}
+.mi.bg-hover-greenLight:hover {
+    background: #4cd137;
+}
+.mi.bg-hover-orange:hover {
+    background: #FFC312;
+}
+.mi.bg-hover-blue:hover {
+    background: #5352ed;
+}
+.mi.bg-hover-blueLight:hover {
+    background: #1e90ff;
+}
+.mi.bg-hover-green:hover {
+    background: #2ed573;
+}
+.mi.bg-hover-yellow:hover {
+    background: #fff200;
+}
+.mi.bg-hover-purple:hover {
+    background: #cd84f1;
+}
+.mi.bg-hover-transparent {
+    background: transparent !important;
+}
+/**************************************
+* BORDES
+**************************************/
+.mi.border {
+    border: 1px solid #ced6e0;
+}
+.mi.border-top {
+    border-top: 1px solid #ced6e0;
+}
+.mi.border-left {
+    border-left: 1px solid #ced6e0;
+}
+.mi.border-bottom {
+    border-bottom: 1px solid #ced6e0;
+}
+.mi.border-right {
+    border-right: 1px solid #ced6e0;
+}
+.mi.border-red {
+    border-color:  #EA2027;
+}
+.mi.border-melon {
+    border-color: #ff4757;
+}
+.mi.border-greenLight {
+    border-color: #4cd137;
+}
+.mi.border-orange {
+    border-color: #FFC312;
+}
+.mi.border-blue {
+    border-color: #5352ed;
+}
+.mi.border-blueLight {
+    border-color: #1e90ff;
+}
+.mi.border-green {
+    border-color: #2ed573;
+}
+.mi.border-yellow {
+    border-color: #fff200;
+}
+.mi.border-purple {
+    border-color: #cd84f1;
+}
+.mi.rounded {
+    border-radius: 4px;
+}
+/**************************************
+* TIPOGRAFIA
+***************************************/
+.mi.h1,
+.mi.h2,
+.mi.h3,
+.mi.h4,
+.mi.h5,
+.mi.h6 {
+    font-weight: bold;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+.mi.h1 {
+    font-size: 30px;
+}
+.mi.h2 {
+    font-size: 25px;
+}
+.mi.h3 {
+    font-size: 20px;
+}
+.mi.h4 {
+    font-size: 18px;
+}
+.mi.h5 {
+    font-size: 15px;
+}
+.mi.h6 {
+    font-size: 10px;
+}
+.mi.color-red {
+    color: #EA2027;
+}
+.mi.color-melon {
+    color: #ff4757;
+}
+.mi.color-greenLight {
+    color: #4cd137;
+}
+.mi.color-orange {
+    color: #FFC312;
+}
+.mi.color-blue {
+    color: #5352ed;
+}
+.mi.color-blueLight {
+    color: #1e90ff;
+}
+.mi.color-green {
+    color: #2ed573;
+}
+.mi.color-yellow {
+    color: #fff200;
+}
+.mi.color-purple {
+    color: #cd84f1;
+}
+.mi.text-left {
+  text-align: left;
+}
+.mi.text-center {
+  text-align: center;
+}
+.mi.text-right {
+  text-align: right;
+}
+.mi.text-justify {
+  text-align: justify;
+}
+/***********************************
+* CONTENEDORES
+***********************************/
+.mi.container {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*********************************
+* CURSORES
+*********************************/
+.pointer {
+    cursor: pointer;
+}
+/**********************************
+* SOMBRAS
+**********************************/
+.mi.shadow {
+    box-shadow: 0px 0px 7px #bbb;
+}
+.mi.shadow-x {
+    box-shadow: 5px 0px 5px #bbb;
+}
+.mi.shadow-y {
+    box-shadow: 0px 5px 5px #bbb;
+}
+.mi.shadow-x-y {
+    box-shadow: 5px 5px 5px #bbb;
+}
+.mi.shadow-inset {
+    box-shadow: 0px 0px 7px #bbb inset;
+}
+.mi.shadow-x-inset {
+    box-shadow: -5px 0px 5px #bbb inset;
+}
+.mi.shadow-y-inset {
+    box-shadow: 0px -5px 5px #bbb inset;
+}
+.mi.shadow-x-y-inset {
+    box-shadow: -5px -5px 5px #bbb inset;
+}
+/***********************************
+* INPUTS
+***********************************/
+.mi.input-text {
+    max-width: 1024px;
+    height: 30px;
+    border: none;
+    border: 1px solid #bbb;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #bbb;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+.mi.input-text-bottom {
+    max-width: 1024px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #bbb;
+    font-size: 0.8em;
+}
+.mi.input-text-left {
+    max-width: 1024px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-left: 1px solid #bbb;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 0.8em;
+    color: #bbb;
+}
+/**********************************
+* FLEX-BOX
+**********************************/
+.mi.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mi.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.mi.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.mi.flex-center {
+    justify-content: center;
+}
+.mi.flex-start {
+    justify-content: flex-start;
+}
+.mi.flex-end {
+    justify-content: flex-end;
+}
+.mi.flex-between {
+    justify-content: space-between;
+}
+.mi.flex-around {
+    justify-content: space-around;
+}
+.mi.flex-evenly {
+    justify-content: evently;
+}
+.mi.flex-align-center {
+    align-items: center;
+}
+.mi.flex-align-start {
+    align-items: flex-start;
+}
+.mi.flex-align-end {
+    align-items: flex-end;
+}
+.mi.flex-align-stretch {
+    align-items: stretch
+}
+.mi.flex-align-baseline {
+    align-items: baseline;
+}
+.mi.flex-order-1 {
+    order: 1;
+}
+.mi.flex-order-2 {
+    order: 2;
+}
+.mi.flex-order-3 {
+    order: 3;
+}
+.mi.flex-order-4 {
+    order: 4;
+}
+.mi.flex-order-5 {
+    order: 5;
+}
+.mi.flex-order-6 {
+    order: 6;
+}
+.mi.flex-order-7 {
+    order: 7;
+}
+.mi.flex-order-8 {
+    order: 8;
+}
+.mi.flex-order-9 {
+    order: 9;
+}
+.mi.flex-order-10 {
+    order: 10;
+}
+.mi.flex-order-11 {
+    order: 11;
+}
+.mi.flex-order-12 {
+    order: 12;
+}
+.mi.flex-grow-1 {
+    flex-grow: 1;
+}
+.mi.flex-grow-2 {
+    flex-grow: 2;
+}
+.mi.flex-grow-3 {
+    flex-grow: 3;
+}
+.mi.flex-grow-4 {
+    flex-grow: 4;
+}
+.mi.flex-grow-5 {
+    flex-grow: 5;
+}
+.mi.flex-shrink-1 {
+    flex-shrink: 1;
+}
+.mi.flex-shrink-2 {
+    flex-shrink: 2;
+}
+.mi.flex-shrink-3 {
+    flex-shrink: 3;
+}
+.mi.flex-shrink-4 {
+    flex-shrink: 4;
+}
+.mi.flex-shrink-5 {
+    flex-shrink: 5;
+}
+.mi.flex-self-start {
+    align-self: flex-start;
+}
+.mi.flex-self-end {
+    align-self: flex-end;
+}
+.mi.flex-self-center {
+    align-self: center;
+}
+.mi.flex-self-baseline {
+    align-self: baseline;
+}
+.mi.flex-self-stretch {
+    align-self: stretch;
+}
+/**********************************
+* RESPONSEIVE
+**********************************/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .mi.mobile.w-1-2,
+  .mi.mobile.w-1-3,
+  .mi.mobile.w-2-3,
+  .mi.mobile.w-1-4,
+  .mi.mobile.w-2-4,
+  .mi.mobile.w-3-4,
+  .mi.mobile.w-1-5,
+  .mi.mobile.w-2-5,
+  .mi.mobile.w-3-5,
+  .mi.mobile.w-4-5{
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .mi.tablet.w-1-2 {
+    width: 100% !important;
+  }
+  .mi.tablet.w-1-3 {
+    width: calc((100%/3)*2) !important;
+  }
+  .mi.tablet.w-2-3 {
+    width: 100% !important;
+  }
+  .mi.tablet.w-1-4 {
+    width: calc((100%/4)*2) !important;
+  }
+  .mi.tablet.w-2-4 {
+    width: calc((100%/4)*3) !important;
+  }
+  .mi.tablet.w-3-4 {
+    width: 100% !important;
+  }
+  .mi.tablet.w-1-5 {
+    width: calc((100%/5)*2) !important;
+  }
+  .mi.tablet.w-2-5 {
+    width: calc((100%/5)*3) !important;
+  }
+  .mi.tablet.w-3-5 {
+    width: calc((100%/5)*4) !important;
+  }
+  .mi.tablet.w-4-5{
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 768px) {
+
+}
+.mi.w-1-2 {
+  box-sizing: border-box;
+  width: calc(100%/2);
+}
+.mi.w-1-3 {
+  box-sizing: border-box;
+  width: calc(100%/3);
+}
+.mi.w-2-3 {
+  box-sizing: border-box;
+  width: calc((100%/3)*2);
+}
+.mi.w-1-4 {
+  box-sizing: border-box;
+  width: calc(100%/4);
+}
+.mi.w-2-4 {
+  box-sizing: border-box;
+  width: calc((100%/4)*2);
+}.mi.w-3-4 {
+  box-sizing: border-box;
+  width: calc((100%/4)*3);
+}
+.mi.w-1-5 {
+  box-sizing: border-box;
+  width: calc(100%/5);
+}
+.mi.w-2-5 {
+  box-sizing: border-box;
+  width: calc((100%/5)*2);
+}
+.mi.w-3-5 {
+  box-sizing: border-box;
+  width: calc((100%/5)*3);
+}
+.mi.w-4-5 {
+  box-sizing: border-box;
+  width: calc((100%/5)*4);
+}
+.mi.w-1 {
+  box-sizing: border-box;
+  width: 100%;
+}
+/*
+background: blue;
+content: "";
+height: 155px;
+left: -75px;
+opacity: .2;
+position: absolute;
+top: -50px;
+-webkit-transform: rotate(35deg);
+transform: rotate(35deg);
+-webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+width: 50px;
+z-index: -10;
+
+
+
+color: #fff;
+cursor: pointer;
+display: block;
+font-size: 16px;
+font-weight: 400;
+line-height: 45px;
+margin: 0 auto 2em;
+max-width: 160px;
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+vertical-align: middle;
+width: 100%;
+*/
